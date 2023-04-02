@@ -11,6 +11,15 @@ Key* Grid-based Fast SLAM
 [image7]: img/a7.png "img7"
 [image8]: img/a8.png "img8"
 
+
+[image9]: img/b1.png "img9"
+[image10]: img/b2.png "img10"
+[image11]: img/b3.png "img11"
+[image12]: img/b4.png "img12"
+[image13]: img/b5.png "img13"
+[image14]: img/b6.png "img14"
+[image15]: img/b7.png "img15"
+
 # Forms SLAM
 ![alt text][image0]
 
@@ -98,6 +107,7 @@ The sampling motion and importance weight will be both solved with the MCL algor
 
 
 # Launch with Turtlebot kinetic
+![alt text][image14]
 Create a catkin_ws in /home/workspace/
 ```bash
 $ mkdir -p /home/workspace/catkin_ws/src
@@ -124,7 +134,8 @@ $ source devel/setup.bash
 # Deploying a Turltebot in a Willow Garage environment
 $ roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=worlds/willowgarage.world
 ```
-## SLAM with ROS
+![alt text][image9]
+## SLAM with ROS Kinetic
 catkin workspace
 ```bash
 $ cd /home/workspace/catkin_ws/src
@@ -133,6 +144,7 @@ $ rosdep install gmapping
 $ cd..
 $ catkin_make
 ```
+![alt text][image10]
 
 Terminal 1
 
@@ -142,7 +154,8 @@ $ cd /home/workspace/catkin_ws
 $ source devel/setup.bash
 $ roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=worlds/willowgarage.world 
 ```
-
+![alt text][image11]
+![alt text][image12]
 Terminal 2
 
 Launch the keyboard teleop node
@@ -163,7 +176,7 @@ $ rosrun gmapping slam_gmapping
 
 
 Terminal 4
-
+![alt text][image13]
 Run rviz and subscribe to different published topics to visualize the map
 ```bash
 $ rosrun rviz rviz
@@ -177,6 +190,8 @@ Add a camera and select the /camera/rgb/image_raw topic
 Add a map and select the /map topic
 Now, map the environment by driving your robot using keyboard commands.
 
+![alt text][image14]
+![alt text][image15]
 Terminal 5
 
 Save a map of the environment and share it with your classmates
