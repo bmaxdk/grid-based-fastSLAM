@@ -9,6 +9,7 @@ Grid-based Fast SLAM
 [image5]: img/a5.jpg "img5"
 [image6]: img/a6.jpg "img6"
 [image7]: img/a7.png "img7"
+[image8]: img/a8.png "img8"
 
 # Forms SLAM
 ![alt text][image0]
@@ -75,10 +76,15 @@ It is simple and easy to implement. However, this algorithm is known to be ineff
 It overcomes the inefficiency of FastSLAM 1.0 by imposing a different distribution, which results in a low number of particles. Keep in mind that both of the FastSLAM 1.0 and 2.0 algorithms use a low dimensional Extended Kalman filter to estimate the posterior over the map features.
 
 ### `Grid-based FastSLAM`
+![alt text][image6]
 The third instance of FastSLAM is really an extension to FastSLAM known as the grid-based FastSLAM algorithm, which adapts FastSLAM to grid maps. 
 
+![alt text][image7]
 `Sampling Motion` $p(x_{t} | x_{t-1}^{[k]} , u_{t})$: Estimates the current pose given the k-th particle previous pose and the current controls u.
 
 `Map Estimation` $p(m_{t} | z_{t}, x_{t}^{[k]} , m_{t-1}^{[k]})$: Estimates the current map given the current measurements, the current k-th particle pose, and the previous k-th particle map
 
 `Importance Weight` $p(z_{t} | x_{t}^{[k]} , m^{[k]})$: Estimates the current likelihood of the measurement given the current k-th particle pose and the current k-th particle map.
+
+Algorithm:
+![alt text][image8]
