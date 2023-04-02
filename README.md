@@ -95,3 +95,5 @@ The sampling motion and importance weight will be both solved with the MCL algor
 
 # The Grid-based FastSLAM Algorithm:
 ![alt text][image8]
+
+[gmapping](http://wiki.ros.org/gmapping) ROS Package provides laser based SLAM
