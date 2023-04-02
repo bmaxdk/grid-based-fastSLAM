@@ -96,4 +96,60 @@ The sampling motion and importance weight will be both solved with the MCL algor
 # The Grid-based FastSLAM Algorithm:
 ![alt text][image8]
 
+# Launch with Turtlebot3
 [gmapping](http://wiki.ros.org/gmapping) ROS Package provides laser based SLAM
+
+## [Turtlebot3 Gazebo Simulation](https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/)
+Install Simulation Package
+```bash
+$ cd ~/catkin_ws/src/
+$ git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+$ cd ~/catkin_ws && catkin_make
+```
+### Launch Simulation World
+1. Empty World
+```bash
+$ export TURTLEBOT3_MODEL=burger
+$ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
+```
+
+2. TurtleBot3 World
+```bash
+$ export TURTLEBOT3_MODEL=waffle
+$ roslaunch turtlebot3_gazebo turtlebot3_world.launch
+```
+3. TurtleBot3 House
+```bash
+$ export TURTLEBOT3_MODEL=waffle_pi
+$ roslaunch turtlebot3_gazebo turtlebot3_house.launch
+```
+
+
+## [SLAM Simulation](https://emanual.robotis.com/docs/en/platform/turtlebot3/slam_simulation/)
+### Launch Simulation World
+```bash
+$ export TURTLEBOT3_MODEL=burger
+$ roslaunch turtlebot3_gazebo turtlebot3_world.launch
+```
+
+### Run SLAM Node
+```bash
+$ export TURTLEBOT3_MODEL=burger
+$ roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
+```
+
+### Run Teleoperation Node
+```bash
+$ export TURTLEBOT3_MODEL=burger
+$ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+```
+
+### Save Map
+```bash
+$ rosrun map_server map_saver -f ~/map
+```
+
+## More Info.
+[Nav_simulation](https://emanual.robotis.com/docs/en/platform/turtlebot3/nav_simulation/)
+[Fakenode_simulation(https://emanual.robotis.com/docs/en/platform/turtlebot3/fakenode_simulation/)
+[Standalone Gazebo Simulation](https://emanual.robotis.com/docs/en/platform/turtlebot3/standalone_gazebo_simulation/)
