@@ -153,6 +153,6 @@ $ rosrun map_server map_saver -f ~/map
 
 [Navigation Simulation](https://emanual.robotis.com/docs/en/platform/turtlebot3/nav_simulation)
 
-[Fakenode_simulation(https://emanual.robotis.com/docs/en/platform/turtlebot3/fakenode_simulation/)
+[Fakenode_simulation](https://emanual.robotis.com/docs/en/platform/turtlebot3/fakenode_simulation)
 
 [Standalone Gazebo Simulation](https://emanual.robotis.com/docs/en/platform/turtlebot3/standalone_gazebo_simulation/)
