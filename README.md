@@ -68,8 +68,8 @@ With the MCL, FastSLAM estimates the robot trajectory. With the Low-Dimensional 
 
 
 ## Fast SLAM
-![alt text][image5]
 The main advantage of the FastSLAM algorithm is that it uses a particle filter approach to solve the SLAM problem. Each particle will hold a guess of the robot trajectory, and by doing so, the SLAM problem is reduced to mapping with known poses.
+![alt text][image5]
 
 ### `FastSLAM 1.0`
 It is simple and easy to implement. However, this algorithm is known to be inefficient since particle filters generate sample inefficiency.
