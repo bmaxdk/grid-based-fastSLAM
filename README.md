@@ -81,7 +81,7 @@ Both FastSLAM 1.0 and 2.0 algorithm presents a big disadvantage since it must al
 
 ### `Grid-based FastSLAM`
 ![alt text][image6]
-The third instance of FastSLAM is really an extension to FastSLAM known as the grid-based FastSLAM algorithm, which adapts FastSLAM to grid maps. The grid mapping algorithm you can model the environment using grid maps without predefining any landmark position.
+The third instance of FastSLAM is really an extension to FastSLAM known as the grid-based FastSLAM algorithm, which adapts FastSLAM to grid maps. The grid mapping algorithm you can model the environment using grid maps without predefining any landmark position. The Grid-based FastSLAM algorithm estimates the robot trajectory using the MCL. Then, the Grid-based FastSLAM algorithm estimates the map by assuming known poses and using the occupancy grid mapping algorithm.
 
 ![alt text][image7]
 `Sampling Motion` $p(x_{t} | x_{t-1}^{[k]} , u_{t})$: Estimates the current pose given the k-th particle previous pose and the current controls u.
