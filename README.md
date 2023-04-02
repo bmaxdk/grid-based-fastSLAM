@@ -93,5 +93,5 @@ The third instance of FastSLAM is really an extension to FastSLAM known as the g
 
 The sampling motion and importance weight will be both solved with the MCL algorithm whereas the map estimation technique will be solved with the occupancy grid mapping algorithm.
 
-Algorithm:
+# The Grid-based FastSLAM Algorithm:
 ![alt text][image8]
