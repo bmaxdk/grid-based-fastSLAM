@@ -106,8 +106,10 @@ The sampling motion and importance weight will be both solved with the MCL algor
 ![alt text][image8]
 
 
-# Launch with Turtlebot kinetic
+# Launch with Turtlebot for kinetic 
 ![alt text][image14]
+[catkin_ws](https://github.com/bmaxdk/grid-based-fastSLAM/tree/main/workspace/catkin_ws)
+
 Create a catkin_ws in /home/workspace/
 ```bash
 $ mkdir -p /home/workspace/catkin_ws/src
@@ -207,8 +209,9 @@ With the [map_server](http://wiki.ros.org/map_server) you can load and save maps
 
 
 
-# Launch with Turtlebot3 noetic
+# Launch with Turtlebot3 for noetic
 [gmapping](http://wiki.ros.org/gmapping) ROS Package provides laser based SLAM
+[catkin_ws](https://github.com/bmaxdk/grid-based-fastSLAM/tree/main/catkin_ws)
 
 ## [Turtlebot3 Gazebo Simulation](https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/)
 Install Simulation Package
