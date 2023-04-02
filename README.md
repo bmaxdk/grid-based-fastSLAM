@@ -91,5 +91,7 @@ The third instance of FastSLAM is really an extension to FastSLAM known as the g
 
 `Importance Weight` $p(z_{t} | x_{t}^{[k]} , m^{[k]})$: Estimates the current likelihood of the measurement given the current k-th particle pose and the current k-th particle map.
 
+The sampling motion and importance weight will be both solved with the MCL algorithm whereas the map estimation technique will be solved with the occupancy grid mapping algorithm.
+
 Algorithm:
 ![alt text][image8]
