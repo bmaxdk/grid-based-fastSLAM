@@ -6,8 +6,8 @@ Grid-based Fast SLAM
 [image2]: img/a2.png "img2"
 [image3]: img/a3.png "img3"
 [image4]: img/a4.png "img4"
-[image5]: img/a5.jpg "img5"
-[image6]: img/a6.jpg "img6"
+[image5]: img/a5.png "img5"
+[image6]: img/a6.jpeg "img6"
 [image7]: img/a7.png "img7"
 [image8]: img/a8.png "img8"
 
