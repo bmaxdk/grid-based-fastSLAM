@@ -96,7 +96,103 @@ The sampling motion and importance weight will be both solved with the MCL algor
 # The Grid-based FastSLAM Algorithm:
 ![alt text][image8]
 
-# Launch with Turtlebot3
+
+# Launch with Turtlebot kinetic
+Create a catkin_ws in /home/workspace/
+```bash
+$ mkdir -p /home/workspace/catkin_ws/src
+$ cd /home/workspace/catkin_ws/src
+$ catkin_init_workspace
+$ cd ..
+$ catkin_make
+# Perform a System Update/Upgrade
+$ sudo apt-get update
+$ sudo apt-get upgrade -y
+# Clone turtlebot_gazebo and turtlebot_teleop in src
+$ cd src/
+$ git clone https://github.com/turtlebot/turtlebot_simulator
+$ git clone https://github.com/turtlebot/turtlebot
+# Install packages dependencies
+
+$ cd ..
+$ source devel/setup.bash
+$ rosdep -i install turtlebot_gazebo
+$ rosdep -i install turtlebot_teleop
+# Build the packages
+$ catkin_make
+$ source devel/setup.bash
+# Deploying a Turltebot in a Willow Garage environment
+$ roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=worlds/willowgarage.world
+```
+## SLAM with ROS
+catkin workspace
+```bash
+$ cd /home/workspace/catkin_ws/src
+$ git clone https://github.com/ros-perception/slam_gmapping
+$ rosdep install gmapping
+$ cd..
+$ catkin_make
+```
+
+Terminal 1
+
+Launch the turtlebot in a Willow Garage environment
+```bash
+$ cd /home/workspace/catkin_ws
+$ source devel/setup.bash
+$ roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=worlds/willowgarage.world 
+```
+
+Terminal 2
+
+Launch the keyboard teleop node
+```bash
+$ cd /home/workspace/catkin_ws
+$ source devel/setup.bash
+$ roslaunch turtlebot_teleop keyboard_teleop.launch
+```
+
+Terminal 3
+
+Run the slam_gmapping node
+```bash
+$ cd /home/workspace/catkin_ws
+$ source devel/setup.bash
+$ rosrun gmapping slam_gmapping
+```
+
+
+Terminal 4
+
+Run rviz and subscribe to different published topics to visualize the map
+```bash
+$ rosrun rviz rviz
+```
+Edit the rviz configuration as follows:
+
+Change the Fixed Frame to map
+Keep Reference Frame as default
+Add a RobotModel
+Add a camera and select the /camera/rgb/image_raw topic
+Add a map and select the /map topic
+Now, map the environment by driving your robot using keyboard commands.
+
+Terminal 5
+
+Save a map of the environment and share it with your classmates
+```bash
+$ cd /home/workspace/
+$ rosrun map_server map_saver -f myMap
+```
+With the [map_server](http://wiki.ros.org/map_server) you can load and save maps. Running map_server will generate the map.pgm and the map.yaml files:
+
+
+
+
+
+
+
+# Launch with Turtlebot3 noetic
 [gmapping](http://wiki.ros.org/gmapping) ROS Package provides laser based SLAM
 
 ## [Turtlebot3 Gazebo Simulation](https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/)
