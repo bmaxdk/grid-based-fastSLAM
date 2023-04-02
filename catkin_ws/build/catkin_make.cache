@@ -1,0 +1,2 @@
+turtlebot3_simulations/turtlebot3_fake:turtlebot3_simulations/turtlebot3_gazebo:turtlebot3_simulations/turtlebot3_simulations
+-DCATKIN_DEVEL_PREFIX=/home/eight/Downloads/Udacity_RoboticsSE/L5/grid-basedFastSLAM/first/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/eight/Downloads/Udacity_RoboticsSE/L5/grid-basedFastSLAM/first/catkin_ws/install -G Unix Makefiles
